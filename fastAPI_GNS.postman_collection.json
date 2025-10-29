@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "9749e9af-0f67-454f-ab19-5ac1434784f5",
+		"name": "fastAPI_GNS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34647470"
+	},
+	"item": [
+		{
+			"name": "create an Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"item1\",\n    \"precio\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "create an Item Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"item2\",\n    \"precio\": \"20\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "get all Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/items"
+			},
+			"response": []
+		},
+		{
+			"name": "get A Specific Item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"item1\",\n    \"precio\": \"10\"\n}"
+				},
+				"url": "http://localhost:8000/items/1"
+			},
+			"response": []
+		}
+	]
+}
